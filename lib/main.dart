@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zoom_clone/screens/splash_screen.dart';
+import 'package:zoom_clone/screens/login_screen.dart';
+import 'package:zoom_clone/utils/colors.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,9 +11,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
+      ),
+      title: 'Zoom Clone',
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      routes: {
+        '/login': (context) => const LoginScreen(),
+      },
+      home: const LoginScreen(),
     );
   }
 }
