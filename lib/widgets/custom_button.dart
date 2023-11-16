@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zoom_clone/utils/colors.dart';
 
-
 class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
@@ -25,7 +24,9 @@ class CustomButton extends StatelessWidget {
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
-            side: const BorderSide(color: buttonColor),
+            side: const BorderSide(
+              color: buttonColor,
+            ),
           ),
         ),
         child: Text(
