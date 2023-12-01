@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
         scaffoldBackgroundColor: backgroundColor,
       ),
       title: 'Zoom Clone',
-      debugShowCheckedModeBanner: false,
+      // debugShowCheckedModeBanner: false,
       routes: {
         '/login': (context) => const LoginScreen(),
       },
